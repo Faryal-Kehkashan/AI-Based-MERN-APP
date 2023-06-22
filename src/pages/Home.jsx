@@ -1,6 +1,12 @@
 import React, { useState, useEffect} from 'react'
 import { Loader, Card, FormField } from '../components'
 
+
+const RenderCards = ({ data, title }) => {
+  if(data?.length > 0) {
+    return data.map((post) => <Card key = {post.id} {...post}/>)
+  }
+  }
 function Home() {
 
   const [loading, setLoading] = useState(false);
