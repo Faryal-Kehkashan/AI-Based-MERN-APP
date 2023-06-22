@@ -4,7 +4,7 @@ import { Loader, Card, FormField } from '../components'
 
 const RenderCards = ({ data, title }) => {
   if(data?.length > 0) {
-    return data.map((post) => <Card key = {post.id} {...post}/>)
+    return data.map((post) => <Card key = {post._id} {...post}/>)
   }
   return (
     <h2 className='mt-5 font-bold text-[#6449ff] text-xl uppercase'>
@@ -45,7 +45,11 @@ function Home() {
               </h2>
             )}
             <div className='grid lg:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-3'>
-
+              {searchText ? (
+                <RenderCards data= {[]} title = "No results found" />
+              ) : (
+                <RenderCards data={[]} title="No posts found"/>
+              )}
             </div>
             </>
           )
