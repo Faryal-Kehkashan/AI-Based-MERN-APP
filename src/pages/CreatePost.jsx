@@ -6,6 +6,8 @@ import { getRandomPrompt } from '../utils'
 import { FormField, Loader } from '../components'
 
 function CreatePost() {
+  const navigate = useNavigate();
+  
   return (
     <div>CreatePost</div>
   )
