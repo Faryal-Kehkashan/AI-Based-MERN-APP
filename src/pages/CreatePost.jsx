@@ -12,6 +12,10 @@ function CreatePost() {
     prompt: '',
     photo: '',
   })
+
+  const [generateImg, setGenerateImg] = useState(false);
+  const [loading, setLoading] = useState(false);
+  
   return (
     <div>CreatePost</div>
   )
