@@ -24,6 +24,10 @@ function CreatePost() {
 
   }
 
+  const handleSurpriseMe = () => {
+    
+  }
+
   return (
     <section className='max-w-7xl mx-auto'>
       <div>
@@ -52,6 +56,8 @@ function CreatePost() {
             placeholder = 'Spongebob Squarepants in the Blair Witch Project'
             value = {form.prompt}
             handleChange = {handleChange}
+            isSurpriseMe
+            handleSurpriseMe = {handleSurpriseMe}
           />
         </div>
       </form>
