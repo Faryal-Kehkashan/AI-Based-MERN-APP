@@ -16,6 +16,10 @@ function CreatePost() {
   const [generateImg, setGenerateImg] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  const handleSubmit = () => {
+    
+  }
+
   return (
     <section className='max-w-7xl mx-auto'>
       <div>
@@ -26,6 +30,10 @@ function CreatePost() {
           Create imaginative and visually stunning images through DALL-E AI and share them with the community.
         </p>
       </div>
+
+      <form className='mt-16 max-w-3xl' onSubmit={handleSubmit}>
+
+      </form>
     </section>
   )
 }
