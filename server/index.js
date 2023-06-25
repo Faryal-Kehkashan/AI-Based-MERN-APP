@@ -8,13 +8,13 @@ const app = express();
 app.use(cors());
 app.use(express.json({ limit: "50mb" }));
 
-app.get("/", async (res, req) => {
-  res.setEncoding("Hello from DALL-E");
+app.get("/", async (req, res) => {
+  res.send("Hello from DALL-E");
 });
 
 const startServer = async () => {
   app.listen(8080, () =>
-    console.log("Server has started on port http://locslhost:8080")
+    console.log("Server has started on port http://localhost:8080")
   );
 };
 
