@@ -19,8 +19,8 @@ function CreatePost() {
   const generatingImage = () => {
         if(form.prompt){
       try {
-          setGenerateImg(true);
-        const response = await fetch('http://localhost:8080/api/v1/dalle', {
+         // setGenerateImg(true);
+       // const response = await fetch('http://localhost:8080/api/v1/dalle', {
           method: 'POST',
         })
       } catch (error) {
