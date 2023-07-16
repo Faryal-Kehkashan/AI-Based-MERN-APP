@@ -27,8 +27,13 @@ function CreatePost() {
           },
           body: JSON.stringify({ prompt: form.prompt }),
         })
-      } catch (error) {
+        const data = await response.json();
         
+        setForm({ ...form, photo: `data:image/jpeg;base64,${data.photo}` });
+      } catch (error) {
+        alert(error);
+      } finally {
+        setGenerateImg(false);
       }
     }
   };
