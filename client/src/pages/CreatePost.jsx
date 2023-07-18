@@ -35,7 +35,8 @@ function CreatePost() {
       } finally {
         setGenerateImg(false);
       }
-    }
+    } else {
+          alert(" Please enter a prompt ");
   };
 
   const handleSubmit = () => {};
