@@ -7,4 +7,9 @@ dotenv.config();
 
 const router = express.Router();
 
+
+router.route("/").get((req, res) => {
+  res.send("Hello from POST!");
+});
+
 export default router;
