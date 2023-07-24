@@ -13,6 +13,17 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
+// GET ALL POST
+router.route("/").post(async (req, res) => {
+  try {
+    const posts = await Post.find({});
+
+    res.status(200).json({ success: true, data: posts });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error });
+  }
+});
+
 // CREATE A POST
 
 router.route("/").post(async (req, res) => {
