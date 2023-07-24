@@ -91,7 +91,7 @@ function CreatePost() {
             LabelName="Your name"
             type="text"
             name="name"
-            placeholder="John Doe"
+            placeholder="Faryal kehkashan"
             value={form.name}
             handleChange={handleChange}
           />
