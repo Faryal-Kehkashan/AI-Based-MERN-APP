@@ -14,7 +14,7 @@ cloudinary.config({
 });
 
 // GET ALL POST
-router.route("/").post(async (req, res) => {
+router.route("/").get(async (req, res) => {
   try {
     const posts = await Post.find({});
 
@@ -41,5 +41,4 @@ router.route("/").post(async (req, res) => {
     res.status(500).json({ success: false, message: error });
   }
 });
-
 export default router;
